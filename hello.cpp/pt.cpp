@@ -1,14 +1,24 @@
 #include <iostream>
 using namespace std;
-int n = 4;
+int n = 5;
 
-for(int i = 1; i <= n; i++){
+int main()
+{
+    for (int i = 1; i <= 3; i++)
+    {
 
-    for(int j = 1; j <= n - i; j++){
-        cout << " ";
+        for (int j = 1; j <= n; j++)
+        {
+            if (((i + j) % 4 == 0) || (i == 2 && j % 4 == 0))
+            {
+                cout << "* ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
     }
-    for(int k = 1; k <= n;k++){
-        cout < "*";
-    }
-    cout << endl;
+    return 0;
 }
